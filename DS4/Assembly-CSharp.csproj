@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\InputTest.cs" />
     <Compile Include="Assets\Script\DS4.cs" />
+    <Compile Include="Assets\Script\AndriodGyro.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
