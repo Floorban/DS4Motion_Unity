@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638458617452458498
-    m_Hash: 4120812805
+      ticks: 638458735221966299
+    m_Hash: 1483918960
   m_LockFileStatus:
     m_FilePath: D:/DS4Motion_Unity/DS4/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638458617494862937
-    m_Hash: 1753164741
+      ticks: 638458735221966299
+    m_Hash: 2101631884
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
