@@ -6,7 +6,7 @@ public class InputTest : MonoBehaviour
 {
     private Gamepad controller = null;
     private Transform m_transform;
-
+    [SerializeField] float rotateSpeed;
     void Start()
     {
         this.controller = DS4.getConroller();
@@ -29,11 +29,12 @@ public class InputTest : MonoBehaviour
         else
         {
             // Press circle button to reset rotation
-            if (controller.buttonEast.isPressed)
+            if (controller.rightTrigger.isPressed)
             {
+                //Debug.Log("reset rotation");
                 m_transform.rotation = Quaternion.identity;
             }
-            m_transform.rotation *= DS4.getRotation(4000 * Time.deltaTime);
+            m_transform.rotation *= DS4.getRotation(rotateSpeed * Time.deltaTime);
         }
     }
 }

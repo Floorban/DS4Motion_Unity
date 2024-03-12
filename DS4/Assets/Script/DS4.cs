@@ -11,19 +11,19 @@ public class DS4
     public static ButtonControl gyroZ = null;
 
     // Acceleration
-    // public static ButtonControl acclX = null;
-    // public static ButtonControl acclY = null;
-    // public static ButtonControl acclZ = null;
+    public static ButtonControl acclX = null;
+    public static ButtonControl acclY = null;
+    public static ButtonControl acclZ = null;
 
     public static Gamepad controller = null;
 
     public static Gamepad getConroller(string layoutFile = null)
     {
         // Read layout from JSON file
-        string layout = File.ReadAllText(layoutFile == null ? "Assets/Script/customLayout.json" : layoutFile);
+        string layout = File.ReadAllText(layoutFile == null ? "Assets/Script/eric.json" : layoutFile);
 
         // Overwrite the default layout
-        InputSystem.RegisterLayoutOverride(layout, "DualShock4GamepadHID");
+        InputSystem.RegisterLayoutOverride(layout, "Eric Controller");
 
         var ds4 = Gamepad.current;
         DS4.controller = ds4;
@@ -33,12 +33,13 @@ public class DS4
 
     private static void bindControls(Gamepad ds4)
     {
-        gyroX = ds4.GetChildControl<ButtonControl>("gyro X 14");
-        gyroY = ds4.GetChildControl<ButtonControl>("gyro Y 16");
-        gyroZ = ds4.GetChildControl<ButtonControl>("gyro Z 18");
-        // acclX = ds4.GetChildControl<ButtonControl>("accl X 20");
-        // acclY = ds4.GetChildControl<ButtonControl>("accl Y 22");
-        // acclZ = ds4.GetChildControl<ButtonControl>("accl Z 24");
+        gyroX = ds4.GetChildControl<ButtonControl>("gyro X 13");
+        gyroY = ds4.GetChildControl<ButtonControl>("gyro Y 15");
+        gyroZ = ds4.GetChildControl<ButtonControl>("gyro Z 17");
+
+        acclX = ds4.GetChildControl<ButtonControl>("accl X 20");
+        acclY = ds4.GetChildControl<ButtonControl>("accl Y 22");
+        acclZ = ds4.GetChildControl<ButtonControl>("accl Z 24");
     }
 
     public static Quaternion getRotation(float scale = 1)
